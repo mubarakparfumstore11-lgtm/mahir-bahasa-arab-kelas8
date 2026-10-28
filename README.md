@@ -34,7 +34,6 @@ data.js      — bank soal (dhomir, fi'il, isim)
 
 ## Hosting (GitHub Pages)
 
-1. Push repo ini ke GitHub.
-2. Buka **Settings → Pages**.
-3. Pilih source: branch `main`, folder `/ (root)`.
-4. Simpan — game akan tersedia di `https://<username>.github.io/<nama-repo>/`.
+Game ini sudah live di: **https://mubarakparfumstore11-lgtm.github.io/mahir-bahasa-arab-kelas8/**
+
+Dihosting dari branch `master`, folder `/ (root)` via GitHub Pages.
