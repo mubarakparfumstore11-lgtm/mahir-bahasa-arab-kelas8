@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mahir Bahasa Arab — Kelas 8</title>
+<meta name="description" content="Game edukasi interaktif Bahasa Arab: Dhomir, Fi'il, dan Isim untuk kelas 8." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-sans@latest/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-sans@latest/500.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-sans@latest/600.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-sans@latest/700.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sauce-sans@latest/800.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+  <span class="blob b4"></span>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<main id="app">
+
+  <!-- ===== HOME SCREEN ===== -->
+  <section class="screen" id="screen-home" data-active="true">
+    <div class="home-wrap">
+      <h1 class="title">
+        <span class="title-arabic">تَعَلَّمْ العَرَبِيَّة</span>
+        <span class="title-sub">Mahir Bahasa Arab <span class="badge">Kelas 8</span></span>
+      </h1>
+      <p class="tagline">Belajar Dhomir, Fi'il, dan Isim sambil bermain! 🎮</p>
+
+      <div class="card-grid" id="category-grid">
+        <!-- category cards injected by JS -->
+      </div>
+
+      <button class="btn btn-ghost" id="btn-mix">🎲 Mode Campuran (Semua Materi)</button>
+
+      <div class="highscores" id="highscores"></div>
+    </div>
+  </section>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <section class="screen" id="screen-game" data-active="false">
+    <div class="game-topbar">
+      <button class="icon-btn" id="btn-quit" title="Kembali ke menu">✕</button>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="hearts" id="hearts"></div>
+    </div>
+
+    <div class="score-pill" id="score-pill">Skor: <span id="score-value">0</span></div>
+
+    <div class="question-area">
+      <div class="category-chip" id="category-chip"></div>
+      <div class="arabic-card" id="arabic-card">
+        <span id="arabic-word" class="arabic-word"></span>
+      </div>
+      <h2 class="question-text" id="question-text"></h2>
+
+      <div class="options-grid" id="options-grid"></div>
+    </div>
+
+    <div class="feedback-banner" id="feedback-banner">
+      <span id="feedback-text"></span>
+    </div>
+  </section>
+
+  <!-- ===== RESULT SCREEN ===== -->
+  <section class="screen" id="screen-result" data-active="false">
+    <div class="result-wrap">
+      <div class="result-emoji" id="result-emoji">🏆</div>
+      <h2 class="result-title" id="result-title">Selesai!</h2>
+      <p class="result-sub" id="result-sub"></p>
+
+      <div class="stars" id="result-stars">
+        <span>⭐</span><span>⭐</span><span>⭐</span>
+      </div>
+
+      <div class="result-stats">
+        <div class="stat-box">
+          <div class="stat-num" id="stat-correct">0</div>
+          <div class="stat-label">Benar</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="stat-score">0</div>
+          <div class="stat-label">Skor</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="stat-best">0</div>
+          <div class="stat-label">Rekor</div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" id="btn-retry">🔁 Coba Lagi</button>
+        <button class="btn btn-ghost" id="btn-home">🏠 Menu Utama</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button class="sound-toggle" id="sound-toggle" title="Suara">🔊</button>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
